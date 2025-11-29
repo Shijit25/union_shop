@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:union_shop/about.dart';
 import 'package:union_shop/collection.dart';
+import 'package:union_shop/login.dart';
 import 'package:union_shop/product_page.dart';
 import 'package:union_shop/shirt.dart';
 
@@ -29,6 +30,7 @@ class UnionShopApp extends StatelessWidget {
         '/about': (context) => const AboutPage(),
         '/collection': (context) => const CollectionPage(),
         '/shirt': (context) => const ShirtPage(),
+        '/login': (context) => const LoginPage(),
       },
     );
   }
@@ -55,6 +57,10 @@ class HomeScreen extends StatelessWidget {
 
   void navigateToShirt(BuildContext context) {
     Navigator.pushNamed(context, '/shirt');
+  }
+
+  void navigateToLogin(BuildContext context) {
+    Navigator.pushNamed(context, '/login');
   }
 
   void placeholderCallbackForButtons() {
@@ -158,7 +164,9 @@ class HomeScreen extends StatelessWidget {
                                     minWidth: 32,
                                     minHeight: 32,
                                   ),
-                                  onPressed: placeholderCallbackForButtons,
+                                  onPressed: () {
+                                    navigateToLogin(context);
+                                  },
                                 ),
                                 IconButton(
                                   icon: const Icon(
