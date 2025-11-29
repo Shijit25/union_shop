@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:union_shop/about.dart';
 import 'package:union_shop/product_page.dart';
 
 void main() {
@@ -21,7 +22,10 @@ class UnionShopApp extends StatelessWidget {
       initialRoute: '/',
       // When navigating to '/product', build and return the ProductPage
       // In your browser, try this link: http://localhost:49856/#/product
-      routes: {'/product': (context) => const ProductPage()},
+      routes: {
+        '/product': (context) => const ProductPage(),
+        '/about': (context) => const AboutPage(),
+      },
     );
   }
 }
@@ -35,6 +39,10 @@ class HomeScreen extends StatelessWidget {
 
   void navigateToProduct(BuildContext context) {
     Navigator.pushNamed(context, '/product');
+  }
+
+  void navigateToAbout(BuildContext context) {
+    Navigator.pushNamed(context, '/about');
   }
 
   void placeholderCallbackForButtons() {
@@ -99,7 +107,7 @@ class HomeScreen extends StatelessWidget {
                               children: [
                                 IconButton(
                                   icon: const Icon(
-                                    Icons.search,
+                                    Icons.info_outline,
                                     size: 18,
                                     color: Colors.grey,
                                   ),
@@ -108,7 +116,9 @@ class HomeScreen extends StatelessWidget {
                                     minWidth: 32,
                                     minHeight: 32,
                                   ),
-                                  onPressed: placeholderCallbackForButtons,
+                                  onPressed: () {
+                                    navigateToAbout(context);
+                                  },
                                 ),
                                 IconButton(
                                   icon: const Icon(
@@ -179,7 +189,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.black.withValues(alpha: 0.7),
+                          color: Colors.black.withOpacity(0.7),
                         ),
                       ),
                     ),
@@ -331,18 +341,23 @@ class ProductCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            child: Image.network(
-              imageAsset,
-              fit: BoxFit.cover,
-              errorBuilder: (context, error, stackTrace) {
-                return Container(
-                  color: Colors.grey[300],
-                  child: const Center(
-                    child: Icon(Icons.image_not_supported, color: Colors.grey),
+            child: imageAsset.startsWith('http')
+                ? Image.network(
+                    imageAsset,
+                    fit: BoxFit.cover,
+                    errorBuilder: (context, error, stackTrace) {
+                      return Container(
+                        color: Colors.grey[300],
+                        child: const Center(
+                          child: Icon(Icons.image_not_supported, color: Colors.grey),
+                        ),
+                      );
+                    },
+                  )
+                : Image.asset(
+                    imageAsset,
+                    fit: BoxFit.cover,
                   ),
-                );
-              },
-            ),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ProductPage extends StatelessWidget {
-  const ProductPage({super.key});
-
-  void navigateToHome(BuildContext context) {
-    Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-  }
-
-  void placeholderCallbackForButtons() {
-    // This is the event handler for buttons that don't work yet
-  }
+class AboutPage extends StatelessWidget {
+  const AboutPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('About Us'),
+        backgroundColor: const Color(0xFF4d2963),
+        foregroundColor: Colors.white,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -29,7 +26,7 @@ class ProductPage extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 8),
                     color: const Color(0xFF4d2963),
                     child: const Text(
-                      'About us',
+                      'BIG SALE! OUR ESSENTIAL RANGE HAS DROPPED IN PRICE! OVER 20% OFF! COME GRAB YOURS WHILE STOCK LASTS!',
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
@@ -42,7 +39,7 @@ class ProductPage extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              navigateToHome(context);
+                              Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
                             },
                             child: Image.network(
                               'https://shop.upsu.net/cdn/shop/files/upsu_300x300.png?v=1614735854',
@@ -62,66 +59,6 @@ class ProductPage extends StatelessWidget {
                             ),
                           ),
                           const Spacer(),
-                          ConstrainedBox(
-                            constraints: const BoxConstraints(maxWidth: 600),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.search,
-                                    size: 18,
-                                    color: Colors.grey,
-                                  ),
-                                  padding: const EdgeInsets.all(8),
-                                  constraints: const BoxConstraints(
-                                    minWidth: 32,
-                                    minHeight: 32,
-                                  ),
-                                  onPressed: placeholderCallbackForButtons,
-                                ),
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.person_outline,
-                                    size: 18,
-                                    color: Colors.grey,
-                                  ),
-                                  padding: const EdgeInsets.all(8),
-                                  constraints: const BoxConstraints(
-                                    minWidth: 32,
-                                    minHeight: 32,
-                                  ),
-                                  onPressed: placeholderCallbackForButtons,
-                                ),
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.shopping_bag_outlined,
-                                    size: 18,
-                                    color: Colors.grey,
-                                  ),
-                                  padding: const EdgeInsets.all(8),
-                                  constraints: const BoxConstraints(
-                                    minWidth: 32,
-                                    minHeight: 32,
-                                  ),
-                                  onPressed: placeholderCallbackForButtons,
-                                ),
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.menu,
-                                    size: 18,
-                                    color: Colors.grey,
-                                  ),
-                                  padding: const EdgeInsets.all(8),
-                                  constraints: const BoxConstraints(
-                                    minWidth: 32,
-                                    minHeight: 32,
-                                  ),
-                                  onPressed: placeholderCallbackForButtons,
-                                ),
-                              ],
-                            ),
-                          ),
                         ],
                       ),
                     ),
@@ -129,15 +66,14 @@ class ProductPage extends StatelessWidget {
                 ],
               ),
             ),
-
             // Product details
             Container(
               color: Colors.white,
               padding: const EdgeInsets.all(24),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [ 
-                  const Text(
+                children: [
+                  Text(
                     'Description of about page',
                     style: TextStyle(
                       fontSize: 18,
@@ -145,8 +81,8 @@ class ProductPage extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
-                  const SizedBox(height: 8),
-                  const Text(
+                  SizedBox(height: 8),
+                  Text(
                     'This is the about page.',
                     style: TextStyle(
                       fontSize: 16,
@@ -157,14 +93,13 @@ class ProductPage extends StatelessWidget {
                 ],
               ),
             ),
-
             // Footer
             Container(
               width: double.infinity,
               color: Colors.grey[50],
               padding: const EdgeInsets.all(24),
               child: const Text(
-                'University of Portsmouth Shop',
+                'Placeholder Footer',
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 16,
