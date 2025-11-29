@@ -258,27 +258,27 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSpacing: 48,
                       children: const [
                         ProductCard(
-                          title: 'Placeholder Product 1',
+                          title: 'shirt',
                           price: '£10.00',
-                          imageUrl:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                          imageAsset:
+                              'assets/shirt.png',
                         ),
                         ProductCard(
                           title: 'Placeholder Product 2',
                           price: '£15.00',
-                          imageUrl:
+                          imageAsset:
                               'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
                         ),
                         ProductCard(
                           title: 'Placeholder Product 3',
                           price: '£20.00',
-                          imageUrl:
+                          imageAsset:
                               'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
                         ),
                         ProductCard(
                           title: 'Placeholder Product 4',
                           price: '£25.00',
-                          imageUrl:
+                          imageAsset:
                               'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
                         ),
                       ],
@@ -312,13 +312,13 @@ class HomeScreen extends StatelessWidget {
 class ProductCard extends StatelessWidget {
   final String title;
   final String price;
-  final String imageUrl;
+  final String imageAsset;
 
   const ProductCard({
     super.key,
     required this.title,
     required this.price,
-    required this.imageUrl,
+    required this.imageAsset,
   });
 
   @override
@@ -332,7 +332,7 @@ class ProductCard extends StatelessWidget {
         children: [
           Expanded(
             child: Image.network(
-              imageUrl,
+              imageAsset,
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
                 return Container(
