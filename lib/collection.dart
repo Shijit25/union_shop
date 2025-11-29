@@ -91,26 +91,32 @@ class CollectionPage extends StatelessWidget {
                     crossAxisCount: 2,
                     crossAxisSpacing: 24,
                     mainAxisSpacing: 24,
-                    children: const [
+                    children: [
                       ProductCard(
-                        title: 'Classic Sweatshirt',
+                        title: 'Shirt',
                         price: '£25.00',
-                        imageAsset: 'https://shop.upsu.net/cdn/shop/files/ClassicSweatshirt-Maroon-1_1024x1024@2x.jpg?v=1752230282',
+                        imageAsset: 'assets/shirt.png',
+                        onTap: () {
+                          Navigator.pushNamed(context, '/shirt');
+                        },
                       ),
                       ProductCard(
                         title: 'Classic T-Shirt',
                         price: '£12.00',
                         imageAsset: 'https://shop.upsu.net/cdn/shop/files/ClassicT-Shirt-White-1_1024x1024@2x.jpg?v=1752230282',
+                        onTap: () {},
                       ),
                       ProductCard(
                         title: 'Classic Hoodie',
                         price: '£30.00',
                         imageAsset: 'https://shop.upsu.net/cdn/shop/files/ClassicHoodie-Navy-1_1024x1024@2x.jpg?v=1752230282',
+                        onTap: () {},
                       ),
                       ProductCard(
                         title: 'Classic Beanie',
                         price: '£10.00',
                         imageAsset: 'https://shop.upsu.net/cdn/shop/files/ClassicBeanie-Black-1_1024x1024@2x.jpg?v=1752230282',
+                        onTap: () {},
                       ),
                     ],
                   ),

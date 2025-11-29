@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:union_shop/about.dart';
 import 'package:union_shop/collection.dart';
 import 'package:union_shop/product_page.dart';
+import 'package:union_shop/shirt.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -27,6 +28,7 @@ class UnionShopApp extends StatelessWidget {
         '/product': (context) => const ProductPage(),
         '/about': (context) => const AboutPage(),
         '/collection': (context) => const CollectionPage(),
+        '/shirt': (context) => const ShirtPage(),
       },
     );
   }
@@ -49,6 +51,10 @@ class HomeScreen extends StatelessWidget {
 
   void navigateToCollection(BuildContext context) {
     Navigator.pushNamed(context, '/collection');
+  }
+
+  void navigateToShirt(BuildContext context) {
+    Navigator.pushNamed(context, '/shirt');
   }
 
   void placeholderCallbackForButtons() {
@@ -287,30 +293,33 @@ class HomeScreen extends StatelessWidget {
                           MediaQuery.of(context).size.width > 600 ? 2 : 1,
                       crossAxisSpacing: 24,
                       mainAxisSpacing: 48,
-                      children: const [
+                      children: [
                         ProductCard(
                           title: 'shirt',
                           price: '£10.00',
-                          imageAsset:
-                              'assets/shirt.png',
+                          imageAsset: 'assets/shirt.png',
+                          onTap: () => navigateToShirt(context),
                         ),
                         ProductCard(
                           title: 'Placeholder Product 2',
                           price: '£15.00',
                           imageAsset:
                               'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                          onTap: () => navigateToProduct(context),
                         ),
                         ProductCard(
                           title: 'Placeholder Product 3',
                           price: '£20.00',
                           imageAsset:
                               'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                          onTap: () => navigateToProduct(context),
                         ),
                         ProductCard(
                           title: 'Placeholder Product 4',
                           price: '£25.00',
                           imageAsset:
                               'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                          onTap: () => navigateToProduct(context),
                         ),
                       ],
                     ),
@@ -344,20 +353,20 @@ class ProductCard extends StatelessWidget {
   final String title;
   final String price;
   final String imageAsset;
+  final VoidCallback onTap;
 
   const ProductCard({
     super.key,
     required this.title,
     required this.price,
     required this.imageAsset,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context, '/product');
-      },
+      onTap: onTap,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
