@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:union_shop/about.dart';
+import 'package:union_shop/collection.dart';
 import 'package:union_shop/product_page.dart';
 
 void main() {
@@ -25,6 +26,7 @@ class UnionShopApp extends StatelessWidget {
       routes: {
         '/product': (context) => const ProductPage(),
         '/about': (context) => const AboutPage(),
+        '/collection': (context) => const CollectionPage(),
       },
     );
   }
@@ -43,6 +45,10 @@ class HomeScreen extends StatelessWidget {
 
   void navigateToAbout(BuildContext context) {
     Navigator.pushNamed(context, '/about');
+  }
+
+  void navigateToCollection(BuildContext context) {
+    Navigator.pushNamed(context, '/collection');
   }
 
   void placeholderCallbackForButtons() {
@@ -118,6 +124,21 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                   onPressed: () {
                                     navigateToAbout(context);
+                                  },
+                                ),
+                                IconButton(
+                                  icon: const Icon(
+                                    Icons.collections_bookmark_outlined,
+                                    size: 18,
+                                    color: Colors.grey,
+                                  ),
+                                  padding: const EdgeInsets.all(8),
+                                  constraints: const BoxConstraints(
+                                    minWidth: 32,
+                                    minHeight: 32,
+                                  ),
+                                  onPressed: () {
+                                    navigateToCollection(context);
                                   },
                                 ),
                                 IconButton(
