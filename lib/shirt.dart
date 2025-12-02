@@ -61,47 +61,6 @@ class _ShirtPageState extends State<ShirtPage> {
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
                   children: [
-                    // Search and filter bar
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Row(
-                        children: [
-                          const Icon(
-                            Icons.search,
-                            color: Colors.grey,
-                          ),
-                          const SizedBox(width: 8),
-                          const Expanded(
-                            child: TextField(
-                              decoration: InputDecoration(
-                                hintText: 'Search',
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          Container(
-                            height: 32,
-                            width: 1,
-                            color: Colors.grey[300],
-                          ),
-                          const SizedBox(width: 8),
-                          IconButton(
-                            icon: const Icon(
-                              Icons.filter_list,
-                              color: Colors.grey,
-                            ),
-                            onPressed: placeholderCallbackForButtons,
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-
                     // Product details
                     Container(
                       color: Colors.white,
@@ -133,14 +92,14 @@ class _ShirtPageState extends State<ShirtPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Classic Shirt',
+                                'Shirt',
                                 style: TextStyle(
                                   fontSize: 24,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               Text(
-                                '\$29.99',
+                                '\£6.99',
                                 style: TextStyle(
                                   fontSize: 24,
                                   fontWeight: FontWeight.bold,
@@ -153,7 +112,7 @@ class _ShirtPageState extends State<ShirtPage> {
 
                           // Product description
                           const Text(
-                            'This is a classic shirt made from high-quality cotton. It is available in various sizes and colors. Perfect for any occasion.',
+                            '''Redesigned with a fresh chest logo, our Essential T-shirts are made for everyday wear with a modern twist. Soft, durable, and effortlessly versatile — these are the elevated basics your wardrobe's been waiting for.''',
                             style: TextStyle(
                               color: Colors.grey,
                               height: 1.5,
