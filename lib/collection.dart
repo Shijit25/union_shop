@@ -90,26 +90,32 @@ class CollectionPage extends StatelessWidget {
                         price: '£3.00',
                         imageAsset: 'assets/PortsmouthCityBookmark.png',
                         onTap: () {
-                          Navigator.pushNamed(context, '/shirt');
+                          Navigator.pushNamed(context, '/bookmark');
                         },
                       ),
                       ProductCard(
                         title: 'Portsmouth City Magnet',
                         price: '£4.50',
                         imageAsset: 'assets/PortsmouthCityMagnet.png',
-                        onTap: () {},
+                        onTap: () {
+                              Navigator.pushNamed(context, '/magnet');
+                        },
                       ),
                       ProductCard(
                         title: 'Portsmouth City Postcard',
                         price: '£1.00',
                         imageAsset: 'assets/PortsmouthCityPostcard.png',
-                        onTap: () {},
+                        onTap: () {
+                              Navigator.pushNamed(context, '/postcard');
+                        },
                       ),
                       ProductCard(
                         title: 'Portsmouth City Keyring',
                         price: '£6.75',
                         imageAsset: 'assets/PortsmouthCityKeyring.png',
-                        onTap: () {},
+                        onTap: () {
+                              Navigator.pushNamed(context, '/keyring');
+                        },
                       ),
                     ],
                   ),

@@ -37,7 +37,7 @@ class _SigHoodiePageState extends State<SigHoodiePage> {
               ),
               flexibleSpace: const FlexibleSpaceBar(
                 title: Text(
-                  'Hoodie',
+                  'Signature Hoodie',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
