@@ -11,6 +11,7 @@ import 'package:union_shop/bookmark.dart';
 import 'package:union_shop/keyring.dart';
 import 'package:union_shop/magnet.dart';
 import 'package:union_shop/postcard.dart';
+import 'package:union_shop/all.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -45,6 +46,7 @@ class UnionShopApp extends StatelessWidget {
         '/keyring': (context) => const KeyringPage(),
         '/magnet': (context) => const MagnetPage(),
         '/postcard': (context) => const PostcardPage(),
+        '/all': (context) => const allPage(),
       },
     );
   }
@@ -77,26 +79,36 @@ class HomeScreen extends StatelessWidget {
     Navigator.pushNamed(context, '/login');
   }
 
-   void navigateToHoodie(BuildContext context) {
+  void navigateToHoodie(BuildContext context) {
     Navigator.pushNamed(context, '/hoodie');
   }
-   void navigateToSigHoodie(BuildContext context) {
+
+  void navigateToSigHoodie(BuildContext context) {
     Navigator.pushNamed(context, '/sig_hoodie');
   }
-   void navigateToSigShirt(BuildContext context) {
+
+  void navigateToSigShirt(BuildContext context) {
     Navigator.pushNamed(context, '/sig_shirt');
   }
-   void navigateToBookmark(BuildContext context) {
+
+  void navigateToBookmark(BuildContext context) {
     Navigator.pushNamed(context, '/bookmark');
   }
-   void navigateToKeyring(BuildContext context) {
+
+  void navigateToKeyring(BuildContext context) {
     Navigator.pushNamed(context, '/keyring');
   }
-   void navigateToMagnet(BuildContext context) {
+
+  void navigateToMagnet(BuildContext context) {
     Navigator.pushNamed(context, '/magnet');
   }
-   void navigateToPostcard(BuildContext context) {
+
+  void navigateToPostcard(BuildContext context) {
     Navigator.pushNamed(context, '/postcard');
+  }
+
+  void navigateToAll(BuildContext context) {
+    Navigator.pushNamed(context, '/all');
   }
 
   void placeholderCallbackForButtons() {
@@ -294,7 +306,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 32),
                         ElevatedButton(
-                          onPressed: placeholderCallbackForButtons,
+                          onPressed: () => navigateToAll(context),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFF4d2963),
                             foregroundColor: Colors.white,
@@ -373,20 +385,18 @@ class HomeScreen extends StatelessWidget {
                         ProductCard(
                           title: 'Signature Hoodie',
                           price: '£32.99',
-                          imageAsset:
-                              'assets/sig_hoodie.png',
+                          imageAsset: 'assets/sig_hoodie.png',
                           onTap: () => navigateToSigHoodie(context),
                         ),
                         ProductCard(
                           title: 'Signature Shirt',
                           price: '£14.99',
-                          imageAsset:
-                              'assets/sig_shirt.png',
+                          imageAsset: 'assets/sig_shirt.png',
                           onTap: () => navigateToSigShirt(context),
                         ),
                       ],
                     ),
-                     const SizedBox(height: 48),
+                    const SizedBox(height: 48),
                     const Text(
                       'PORTSMOUTH CITY COLLECTION',
                       style: TextStyle(
@@ -407,28 +417,25 @@ class HomeScreen extends StatelessWidget {
                         ProductCard(
                           title: 'Portsmouth City Bookmark',
                           price: '£3.00',
-                          imageAsset:
-                              'assets/PortsmouthCityBookmark.png',
+                          imageAsset: 'assets/PortsmouthCityBookmark.png',
                           onTap: () => navigateToBookmark(context),
                         ),
                         ProductCard(
                           title: 'Portsmouth City Keyring',
                           price: '£4.45',
-                          imageAsset:
-                              'assets/PortsmouthCityKeyring.png',
+                          imageAsset: 'assets/PortsmouthCityKeyring.png',
                           onTap: () => navigateToKeyring(context),
-                          ),ProductCard(
+                        ),
+                        ProductCard(
                           title: 'Portsmouth City Magnet',
                           price: '£6.75',
-                          imageAsset:
-                              'assets/PortsmouthCityMagnet.png',
+                          imageAsset: 'assets/PortsmouthCityMagnet.png',
                           onTap: () => navigateToMagnet(context),
-                          ),
-                          ProductCard(
+                        ),
+                        ProductCard(
                           title: 'Portsmouth City Postcard',
                           price: '£1.00',
-                          imageAsset:
-                              'assets/PortsmouthCityPostcard.png',
+                          imageAsset: 'assets/PortsmouthCityPostcard.png',
                           onTap: () => navigateToPostcard(context),
                         ),
                       ],
@@ -444,7 +451,7 @@ class HomeScreen extends StatelessWidget {
               color: Colors.grey[50],
               padding: const EdgeInsets.all(24),
               child: const Text(
-               ''' Opening Hours                         Help and Information
+                ''' Opening Hours                         Help and Information
                       
                 ❄️ Winter Break Closure Dates ❄️      Search
                 Closing 4pm 19/12/2025                 Terms & Conditions of Sale Policy,
@@ -500,7 +507,8 @@ class ProductCard extends StatelessWidget {
                       return Container(
                         color: Colors.grey[300],
                         child: const Center(
-                          child: Icon(Icons.image_not_supported, color: Colors.grey),
+                          child: Icon(Icons.image_not_supported,
+                              color: Colors.grey),
                         ),
                       );
                     },
