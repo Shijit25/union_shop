@@ -73,17 +73,10 @@ class CollectionPage extends StatelessWidget {
               child: Column(
                 children: [
                   const Text(
-                    'Autumn Favourites',
+                    'Collection',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 24),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text('Filter:'),
-                      const Text('Sort by:'),
-                    ],
-                  ),
+
                   const SizedBox(height: 24),
                   GridView.count(
                     shrinkWrap: true,
@@ -93,29 +86,29 @@ class CollectionPage extends StatelessWidget {
                     mainAxisSpacing: 24,
                     children: [
                       ProductCard(
-                        title: 'Shirt',
-                        price: '£25.00',
-                        imageAsset: 'assets/shirt.png',
+                        title: 'Portsmouth City Bookmark',
+                        price: '£3.00',
+                        imageAsset: 'assets/PortsmouthCityBookmark.png',
                         onTap: () {
                           Navigator.pushNamed(context, '/shirt');
                         },
                       ),
                       ProductCard(
-                        title: 'Classic T-Shirt',
-                        price: '£12.00',
-                        imageAsset: 'https://shop.upsu.net/cdn/shop/files/ClassicT-Shirt-White-1_1024x1024@2x.jpg?v=1752230282',
+                        title: 'Portsmouth City Magnet',
+                        price: '£4.50',
+                        imageAsset: 'assets/PortsmouthCityMagnet.png',
                         onTap: () {},
                       ),
                       ProductCard(
-                        title: 'Classic Hoodie',
-                        price: '£30.00',
-                        imageAsset: 'https://shop.upsu.net/cdn/shop/files/ClassicHoodie-Navy-1_1024x1024@2x.jpg?v=1752230282',
+                        title: 'Portsmouth City Postcard',
+                        price: '£1.00',
+                        imageAsset: 'assets/PortsmouthCityPostcard.png',
                         onTap: () {},
                       ),
                       ProductCard(
-                        title: 'Classic Beanie',
-                        price: '£10.00',
-                        imageAsset: 'https://shop.upsu.net/cdn/shop/files/ClassicBeanie-Black-1_1024x1024@2x.jpg?v=1752230282',
+                        title: 'Portsmouth City Keyring',
+                        price: '£6.75',
+                        imageAsset: 'assets/PortsmouthCityKeyring.png',
                         onTap: () {},
                       ),
                     ],
@@ -129,7 +122,18 @@ class CollectionPage extends StatelessWidget {
               color: Colors.grey[50],
               padding: const EdgeInsets.all(24),
               child: const Text(
-                'Placeholder Footer',
+                ''' Opening Hours                         Help and Information
+                      
+                ❄️ Winter Break Closure Dates ❄️      Search
+                Closing 4pm 19/12/2025                 Terms & Conditions of Sale Policy,
+                Reopening 10am 05/01/2026
+                Last post date: 12pm on 18/12/2025
+                ------------------------
+                (Term Time)
+                Monday - Friday 10am - 4pm
+                (Outside of Term Time / Consolidation Weeks)
+                Monday - Friday 10am - 3pm
+                Purchase online 24/7''',
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 16,

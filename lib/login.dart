@@ -179,7 +179,18 @@ class LoginPage extends StatelessWidget {
               color: Colors.grey[50],
               padding: const EdgeInsets.all(24),
               child: const Text(
-                'Placeholder Footer',
+                ''' Opening Hours                         Help and Information
+                      
+                ❄️ Winter Break Closure Dates ❄️      Search
+                Closing 4pm 19/12/2025                 Terms & Conditions of Sale Policy,
+                Reopening 10am 05/01/2026
+                Last post date: 12pm on 18/12/2025
+                ------------------------
+                (Term Time)
+                Monday - Friday 10am - 4pm
+                (Outside of Term Time / Consolidation Weeks)
+                Monday - Friday 10am - 3pm
+                Purchase online 24/7''',
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 16,

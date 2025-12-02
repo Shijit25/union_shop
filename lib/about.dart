@@ -7,7 +7,7 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('About Us'),
+        title: const Text(''),
         backgroundColor: const Color(0xFF4d2963),
         foregroundColor: Colors.white,
       ),
@@ -39,7 +39,8 @@ class AboutPage extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+                              Navigator.pushNamedAndRemoveUntil(
+                                  context, '/', (route) => false);
                             },
                             child: Image.network(
                               'https://shop.upsu.net/cdn/shop/files/upsu_300x300.png?v=1614735854',
@@ -74,7 +75,7 @@ class AboutPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Description of about page',
+                    'About Us',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
@@ -88,10 +89,11 @@ class AboutPage extends StatelessWidget {
                     All online purchases are available for delivery or instore collection!
                     We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don’t hesitate to contact us at hello@upsu.net.
                     Happy shopping!
-                    The Union Shop & Reception Team​​​''''',
+                    The Union Shop & Reception Team​​​'''
+                    '',
                     style: TextStyle(
                       fontSize: 16,
-                      color: Colors.grey,
+                      color: Colors.black,
                       height: 1.5,
                     ),
                   ),
