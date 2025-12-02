@@ -320,6 +320,26 @@ class HomeScreen extends StatelessWidget {
                           imageAsset: 'assets/shirt.png',
                           onTap: () => navigateToShirt(context),
                         ),
+                      ],
+                    ),
+                    const SizedBox(height: 48),
+                    const Text(
+                      'SIGNATURE RANGE',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                        letterSpacing: 1,
+                      ),
+                    ),
+                    const SizedBox(height: 48),
+                    GridView.count(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      crossAxisCount:
+                          MediaQuery.of(context).size.width > 600 ? 2 : 1,
+                      crossAxisSpacing: 24,
+                      mainAxisSpacing: 48,
+                      children: [
                         ProductCard(
                           title: 'Placeholder Product 2',
                           price: '£6.99',
