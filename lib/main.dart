@@ -385,30 +385,30 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSpacing: 48,
                       children: [
                         ProductCard(
-                          title: 'Placeholder Product 4',
-                          price: '£25.00',
+                          title: 'Portsmouth City Bookmark',
+                          price: '£3.00',
                           imageAsset:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                              'assets/PortsmouthCityBookmark.png',
                           onTap: () => navigateToProduct(context),
                         ),
                         ProductCard(
-                          title: 'Placeholder Product 4',
-                          price: '£25.00',
+                          title: 'Portsmouth City Keyring',
+                          price: '£4.45',
                           imageAsset:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                              'assets/PortsmouthCityKeyring.png',
                           onTap: () => navigateToProduct(context),
                           ),ProductCard(
-                          title: 'Placeholder Product 4',
-                          price: '£25.00',
+                          title: 'Portsmouth City Magnet',
+                          price: '£6.75',
                           imageAsset:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                              'assets/PortsmouthCityMagnet.png',
                           onTap: () => navigateToProduct(context),
                           ),
                           ProductCard(
-                          title: 'Placeholder Product 4',
-                          price: '£25.00',
+                          title: 'Portsmouth City Postcard',
+                          price: '£1.00',
                           imageAsset:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                              'assets/PortsmouthCityPostcard.png',
                           onTap: () => navigateToProduct(context),
                         ),
                       ],
