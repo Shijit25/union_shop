@@ -23,3 +23,5 @@ flutter:
   assets:
     - assets/shirt.png
     - assets/hoodie.png
+    - assets/sig_hoodie.png
+    - assets/sig_shirt.png

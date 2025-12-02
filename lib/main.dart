@@ -361,6 +361,13 @@ class HomeScreen extends StatelessWidget {
                               'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
                           onTap: () => navigateToProduct(context),
                         ),
+                        ProductCard(
+                          title: 'Placeholder Product 4',
+                          price: '£25.00',
+                          imageAsset:
+                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                          onTap: () => navigateToProduct(context),
+                        ),
                       ],
                     ),
                   ],
