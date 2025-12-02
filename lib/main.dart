@@ -7,6 +7,10 @@ import 'package:union_shop/shirt.dart';
 import 'package:union_shop/hoodie.dart';
 import 'package:union_shop/sig_hoodie.dart';
 import 'package:union_shop/sig_shirt.dart';
+import 'package:union_shop/bookmark.dart';
+import 'package:union_shop/keyring.dart';
+import 'package:union_shop/magnet.dart';
+import 'package:union_shop/postcard.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -37,6 +41,10 @@ class UnionShopApp extends StatelessWidget {
         '/hoodie': (context) => const HoodiePage(),
         '/sig_hoodie': (context) => const SigHoodiePage(),
         '/sig_shirt': (context) => const SigShirtPage(),
+        '/bookmark': (context) => const BookmarkPage(),
+        '/keyring': (context) => const KeyringPage(),
+        '/magnet': (context) => const MagnetPage(),
+        '/postcard': (context) => const PostcardPage(),
       },
     );
   }
@@ -77,6 +85,18 @@ class HomeScreen extends StatelessWidget {
   }
    void navigateToSigShirt(BuildContext context) {
     Navigator.pushNamed(context, '/sig_shirt');
+  }
+   void navigateToBookmark(BuildContext context) {
+    Navigator.pushNamed(context, '/bookmark');
+  }
+   void navigateToKeyring(BuildContext context) {
+    Navigator.pushNamed(context, '/keyring');
+  }
+   void navigateToMagnet(BuildContext context) {
+    Navigator.pushNamed(context, '/magnet');
+  }
+   void navigateToPostcard(BuildContext context) {
+    Navigator.pushNamed(context, '/postcard');
   }
 
   void placeholderCallbackForButtons() {
@@ -389,27 +409,27 @@ class HomeScreen extends StatelessWidget {
                           price: '£3.00',
                           imageAsset:
                               'assets/PortsmouthCityBookmark.png',
-                          onTap: () => navigateToProduct(context),
+                          onTap: () => navigateToBookmark(context),
                         ),
                         ProductCard(
                           title: 'Portsmouth City Keyring',
                           price: '£4.45',
                           imageAsset:
                               'assets/PortsmouthCityKeyring.png',
-                          onTap: () => navigateToProduct(context),
+                          onTap: () => navigateToKeyring(context),
                           ),ProductCard(
                           title: 'Portsmouth City Magnet',
                           price: '£6.75',
                           imageAsset:
                               'assets/PortsmouthCityMagnet.png',
-                          onTap: () => navigateToProduct(context),
+                          onTap: () => navigateToMagnet(context),
                           ),
                           ProductCard(
                           title: 'Portsmouth City Postcard',
                           price: '£1.00',
                           imageAsset:
                               'assets/PortsmouthCityPostcard.png',
-                          onTap: () => navigateToProduct(context),
+                          onTap: () => navigateToPostcard(context),
                         ),
                       ],
                     ),
