@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HoodiePage extends StatefulWidget {
-  const HoodiePage({super.key});
+class SigShirtPage extends StatefulWidget {
+  const SigShirtPage({super.key});
 
   @override
-  State<HoodiePage> createState() => _HoodiePageState();
+  State<SigShirtPage> createState() => _SigShirtPageState();
 }
 
-class _HoodiePageState extends State<HoodiePage> {
+class _SigShirtPageState extends State<SigShirtPage> {
   String _selectedSize = '';
 
   void placeholderCallbackForButtons() {
@@ -79,7 +79,7 @@ class _HoodiePageState extends State<HoodiePage> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8),
                               child: Image.asset(
-                                'assets/hoodie.png',
+                                'assets/sig_shirt.png',
                                 fit: BoxFit.contain,
                               ),
                             ),
@@ -92,14 +92,14 @@ class _HoodiePageState extends State<HoodiePage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'Hoodie',
+                                'Signature Shirt',
                                 style: TextStyle(
                                   fontSize: 24,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               Text(
-                                '\£20.99',
+                                '\£14.99',
                                 style: TextStyle(
                                   fontSize: 24,
                                   fontWeight: FontWeight.bold,
@@ -112,7 +112,8 @@ class _HoodiePageState extends State<HoodiePage> {
 
                           // Product description
                           const Text(
-                            'Redesigned with a fresh chest logo, our limited addition Baby Pink and Stone Blue Hoodies are ultra cosy made for everyday wear with a modern twist. Soft, durable, and effortlessly versatile.',
+                            'Clean. Classic. Elevated.'
+                              'Our Signature T-shirts combine everyday comfort with premium detail. Featuring high-quality embroidery and a relaxed fit, they offer a fresh take on a staple piece. Lightweight and versatile, this tee is perfect for layering or wearing solo - an essential addition to any wardrobe.''',
                             style: TextStyle(
                               color: Colors.grey,
                               height: 1.5,

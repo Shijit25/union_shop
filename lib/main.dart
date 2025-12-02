@@ -5,6 +5,8 @@ import 'package:union_shop/login.dart';
 import 'package:union_shop/product_page.dart';
 import 'package:union_shop/shirt.dart';
 import 'package:union_shop/hoodie.dart';
+import 'package:union_shop/sig_hoodie.dart';
+import 'package:union_shop/sig_shirt.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -33,6 +35,8 @@ class UnionShopApp extends StatelessWidget {
         '/shirt': (context) => const ShirtPage(),
         '/login': (context) => const LoginPage(),
         '/hoodie': (context) => const HoodiePage(),
+        '/sig_hoodie': (context) => const SigHoodiePage(),
+        '/sig_shirt': (context) => const SigShirtPage(),
       },
     );
   }
@@ -67,6 +71,12 @@ class HomeScreen extends StatelessWidget {
 
    void navigateToHoodie(BuildContext context) {
     Navigator.pushNamed(context, '/hoodie');
+  }
+   void navigateToSigHoodie(BuildContext context) {
+    Navigator.pushNamed(context, '/sig_hoodie');
+  }
+   void navigateToSigShirt(BuildContext context) {
+    Navigator.pushNamed(context, '/sig_shirt');
   }
 
   void placeholderCallbackForButtons() {
@@ -345,14 +355,14 @@ class HomeScreen extends StatelessWidget {
                           price: '£32.99',
                           imageAsset:
                               'assets/sig_hoodie.png',
-                          onTap: () => navigateToProduct(context),
+                          onTap: () => navigateToSigHoodie(context),
                         ),
                         ProductCard(
                           title: 'Signature Shirt',
                           price: '£14.99',
                           imageAsset:
                               'assets/sig_shirt.png',
-                          onTap: () => navigateToProduct(context),
+                          onTap: () => navigateToSigShirt(context),
                         ),
                       ],
                     ),
