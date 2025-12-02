@@ -292,7 +292,7 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     const Text(
-                      'PRODUCTS SECTION',
+                      'ESSENTIAL RANGE - OVER 20% OFF!',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
@@ -342,18 +342,38 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         ProductCard(
                           title: 'Signature Hoodie',
-                          price: '£6.99',
+                          price: '£32.99',
                           imageAsset:
                               'assets/sig_hoodie.png',
                           onTap: () => navigateToProduct(context),
                         ),
                         ProductCard(
                           title: 'Signature Shirt',
-                          price: '£20.00',
+                          price: '£14.99',
                           imageAsset:
                               'assets/sig_shirt.png',
                           onTap: () => navigateToProduct(context),
                         ),
+                      ],
+                    ),
+                     const SizedBox(height: 48),
+                    const Text(
+                      'PORTSMOUTH CITY COLLECTION',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                        letterSpacing: 1,
+                      ),
+                    ),
+                    const SizedBox(height: 48),
+                    GridView.count(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      crossAxisCount:
+                          MediaQuery.of(context).size.width > 600 ? 2 : 1,
+                      crossAxisSpacing: 24,
+                      mainAxisSpacing: 48,
+                      children: [
                         ProductCard(
                           title: 'Placeholder Product 4',
                           price: '£25.00',
