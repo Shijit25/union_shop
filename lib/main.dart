@@ -341,17 +341,17 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSpacing: 48,
                       children: [
                         ProductCard(
-                          title: 'Placeholder Product 2',
+                          title: 'Signature Hoodie',
                           price: '£6.99',
                           imageAsset:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                              'assets/sig_hoodie.png',
                           onTap: () => navigateToProduct(context),
                         ),
                         ProductCard(
-                          title: 'Placeholder Product 3',
+                          title: 'Signature Shirt',
                           price: '£20.00',
                           imageAsset:
-                              'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+                              'assets/sig_shirt.png',
                           onTap: () => navigateToProduct(context),
                         ),
                         ProductCard(
