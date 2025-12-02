@@ -4,6 +4,7 @@ import 'package:union_shop/collection.dart';
 import 'package:union_shop/login.dart';
 import 'package:union_shop/product_page.dart';
 import 'package:union_shop/shirt.dart';
+import 'package:union_shop/hoodie.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -31,6 +32,7 @@ class UnionShopApp extends StatelessWidget {
         '/collection': (context) => const CollectionPage(),
         '/shirt': (context) => const ShirtPage(),
         '/login': (context) => const LoginPage(),
+        '/hoodie': (context) => const HoodiePage(),
       },
     );
   }
@@ -61,6 +63,10 @@ class HomeScreen extends StatelessWidget {
 
   void navigateToLogin(BuildContext context) {
     Navigator.pushNamed(context, '/login');
+  }
+
+   void navigateToHoodie(BuildContext context) {
+    Navigator.pushNamed(context, '/hoodie');
   }
 
   void placeholderCallbackForButtons() {
@@ -306,7 +312,7 @@ class HomeScreen extends StatelessWidget {
                           title: 'hoodie',
                           price: '£20.99',
                           imageAsset: 'assets/hoodie.png',
-                          onTap: () => navigateToShirt(context),
+                          onTap: () => navigateToHoodie(context),
                         ),
                         ProductCard(
                           title: 'shirt',
