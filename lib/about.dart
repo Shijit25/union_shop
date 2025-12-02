@@ -83,7 +83,12 @@ class AboutPage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    'This is the about page.',
+                    '''''Welcome to the Union Shop!
+                    We’re dedicated to giving you the very best University branded products, with a range of clothing and merchandise available to shop all year round! We even offer an exclusive personalisation service!
+                    All online purchases are available for delivery or instore collection!
+                    We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don’t hesitate to contact us at hello@upsu.net.
+                    Happy shopping!
+                    The Union Shop & Reception Team​​​''''',
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.grey,
@@ -99,7 +104,18 @@ class AboutPage extends StatelessWidget {
               color: Colors.grey[50],
               padding: const EdgeInsets.all(24),
               child: const Text(
-                'Placeholder Footer',
+                ''' Opening Hours                         Help and Information
+                      
+                ❄️ Winter Break Closure Dates ❄️      Search
+                Closing 4pm 19/12/2025                 Terms & Conditions of Sale Policy,
+                Reopening 10am 05/01/2026
+                Last post date: 12pm on 18/12/2025
+                ------------------------
+                (Term Time)
+                Monday - Friday 10am - 4pm
+                (Outside of Term Time / Consolidation Weeks)
+                Monday - Friday 10am - 3pm
+                Purchase online 24/7''',
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 16,
